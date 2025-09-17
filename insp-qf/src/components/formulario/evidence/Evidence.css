@@ -1,0 +1,181 @@
+/* Estilos CSS complementarios para EvidenceSection */
+
+/* Reset básico para elementos del componente */
+.evidence-section * {
+    box-sizing: border-box;
+}
+
+/* Clases auxiliares para botones */
+.upload-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+}
+
+.delete-button {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+}
+
+/* Clase para checkbox de imagen */
+.image-checkbox {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(4px);
+}
+
+/* Clase para botón de remover (usada en hover) */
+.remove-button {
+    opacity: 0;
+}
+
+/* Clase para imagen de evidencia (usada en hover) */
+.evidence-image {
+    transition: transform 0.2s ease;
+}
+
+/* Estados de loading */
+.image-container.loading {
+    background-color: #f3f4f6;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 640px) {
+    /* En móviles, ajustar padding */
+    .evidence-section {
+        padding: 0.75rem;
+    }
+    
+    /* Controles en columna en móvil */
+    .evidence-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Botones centrados en móvil */
+    .upload-button,
+    .delete-button {
+        justify-content: center;
+    }
+    
+    /* Grid de 2 columnas en móvil */
+    .images-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En pantallas muy pequeñas, una sola columna */
+    .images-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Reducir padding en pantallas pequeñas */
+    .evidence-section {
+        padding: 0.5rem;
+    }
+    
+    /* Ajustar estado vacío */
+    .empty-state {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Estilos de impresión */
+@media print {
+    .evidence-section {
+        page-break-inside: avoid;
+    }
+    
+    /* Ocultar controles en impresión */
+    .evidence-controls {
+        display: none !important;
+    }
+    
+    /* Ajustar grid para impresión */
+    .images-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+    
+    /* Ocultar botones de interacción */
+    .remove-button,
+    .image-checkbox {
+        display: none !important;
+    }
+    
+    /* Colores para impresión */
+    .evidence-section * {
+        color: black !important;
+        background: white !important;
+    }
+    
+    .image-container {
+        border-color: black !important;
+    }
+}
+
+/* Utilidades adicionales */
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Estados de accesibilidad */
+.image-container:focus-within {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Mejoras de contraste para accesibilidad */
+@media (prefers-contrast: high) {
+    .image-container {
+        border-width: 2px;
+    }
+    
+    .empty-state {
+        border-width: 3px;
+    }
+    
+    .remove-button {
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 1px solid #000;
+    }
+}
+
+/* Reducir movimiento para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+    .image-container,
+    .evidence-image,
+    .remove-button,
+    .empty-state {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    .image-container:hover .evidence-image {
+        transform: none !important;
+    }
+}

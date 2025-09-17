@@ -1,0 +1,240 @@
+/* Estilos CSS complementarios para QuestionnaireSection */
+
+/* Reset y estilos base */
+.questionnaire-section * {
+    box-sizing: border-box;
+}
+
+/* Animaciones para mejor UX */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para validación de formulario */
+.questionnaire-error {
+    border: 2px solid #dc2626 !important;
+    background-color: #fef2f2;
+}
+
+.questionnaire-success {
+    border: 2px solid #16a34a !important;
+    background-color: #f0fdf4;
+}
+
+/* Mensaje de error para preguntas no respondidas */
+.error-message {
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+/* Resaltado para filas con errores */
+.row-error {
+    background-color: #fef2f2 !important;
+    border-left: 4px solid #dc2626;
+}
+
+.row-error:hover {
+    background-color: #fecaca !important;
+}
+
+/* Estilos para loading states */
+.loading-questionnaire {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading-questionnaire::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border: 3px solid #d1d5db;
+    border-top: 3px solid #15803d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Estilos para impresión */
+@media print {
+    .questionnaire-section {
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .questionnaire-section * {
+        color: black !important;
+        background: white !important;
+        font-weight: bold !important;
+    }
+    
+    .questionnaire-section table {
+        border: 3px solid black !important;
+    }
+    
+    .questionnaire-section td,
+    .questionnaire-section th {
+        border: 2px solid black !important;
+        background: white !important;
+    }
+    
+    .questionnaire-section input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border: 2px solid black;
+        border-radius: 50%;
+        background: white;
+        position: relative;
+    }
+    
+    .questionnaire-section input[type="radio"]:checked::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background: black;
+        border-radius: 50%;
+    }
+}
+
+/* Estilos para accesibilidad */
+.questionnaire-section input[type="radio"]:focus {
+    outline: 2px solid #15803d;
+    outline-offset: 2px;
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .questionnaire-section {
+        font-size: 12px;
+    }
+    
+    .questionnaire-section table {
+        font-size: 10px;
+    }
+    
+    .questionnaire-section th,
+    .questionnaire-section td {
+        padding: 0.25rem !important;
+    }
+    
+    .questionnaire-section input[type="radio"] {
+        width: 0.875rem !important;
+        height: 0.875rem !important;
+        transform: scale(1) !important;
+    }
+}
+
+/* Estilos para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    .questionnaire-section.dark-mode {
+        background-color: #1f2937;
+        color: white;
+    }
+    
+    .questionnaire-section.dark-mode table {
+        border-color: #6b7280;
+    }
+    
+    .questionnaire-section.dark-mode th {
+        background-color: #374151;
+        color: white;
+        border-color: #6b7280;
+    }
+    
+    .questionnaire-section.dark-mode td {
+        border-color: #6b7280;
+    }
+    
+    .questionnaire-section.dark-mode tr:nth-child(even) {
+        background-color: #374151;
+    }
+    
+    .questionnaire-section.dark-mode tr:hover {
+        background-color: #4b5563;
+    }
+}
+
+/* Utilidades adicionales */
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Indicador de progreso */
+.progress-indicator {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #e5e7eb;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #15803d;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}

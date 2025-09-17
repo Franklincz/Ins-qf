@@ -1,0 +1,378 @@
+/*ProductSection.css
+/* Estilos CSS complementarios para ProductSection */
+
+/* Reset y estilos base */
+.product-section * {
+    box-sizing: border-box;
+}
+
+/* Utilidades de espaciado */
+.mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+    .mb-4 {
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* Estilos para formularios */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Estilos para campos requeridos */
+.required-field label::after {
+    content: " *";
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .error-message {
+        font-size: 0.625rem;
+    }
+}
+
+/* Estilos para mensajes de éxito */
+.success-message {
+    color: #16a34a;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+/* Animaciones para mejor UX */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para campos con autocompletado */
+.autocomplete-container {
+    position: relative;
+    width: 90%;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #000;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.autocomplete-suggestion {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+}
+
+.autocomplete-suggestion:hover,
+.autocomplete-suggestion.highlighted {
+    background-color: #f0fdf4;
+    border-left: 3px solid #16a34a;
+    padding-left: 0.5rem;
+}
+
+.autocomplete-suggestion:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-suggestion:active {
+    background-color: #dcfce7;
+}
+
+@media (max-width: 768px) {
+    .autocomplete-container {
+        width: 100%;
+    }
+    
+    .autocomplete-suggestion {
+        padding: 0.375rem;
+        font-size: 0.75rem;
+    }
+    
+    .autocomplete-suggestions {
+        max-height: 150px;
+    }
+}
+
+/* Estilos para loading states */
+.loading-input {
+    position: relative;
+}
+
+.loading-input::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d1d5db;
+    border-top: 2px solid #15803d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Estilos para scroll personalizado en sugerencias */
+.autocomplete-suggestions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.autocomplete-suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.autocomplete-suggestions::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.autocomplete-suggestions::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Estilos para cuando no hay sugerencias */
+.no-suggestions {
+    padding: 0.75rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+/* Estilos para resaltar texto coincidente */
+.highlight {
+    background-color: #fef3c7;
+    font-weight: 700;
+}
+
+/* Estilos para impresión */
+@media print {
+    .product-section {
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .product-section * {
+        color: black !important;
+        background: white !important;
+        font-weight: bold !important;
+    }
+    
+    .product-section input {
+        border: 2px solid black !important;
+        background: white !important;
+    }
+    
+    .product-section div {
+        border-color: black !important;
+    }
+    
+    .autocomplete-suggestions {
+        display: none !important;
+    }
+}
+
+/* Estilos para accesibilidad */
+.product-section input:focus {
+    outline: 2px solid #15803d;
+    outline-offset: 2px;
+}
+
+.autocomplete-suggestion:focus {
+    outline: 2px solid #15803d;
+    outline-offset: -2px;
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .product-section {
+        font-size: 14px;
+    }
+    
+    .product-section input {
+        padding: 0.25rem !important;
+        font-size: 0.625rem !important;
+    }
+    
+    .product-section label {
+        font-size: 0.625rem !important;
+    }
+    
+    .autocomplete-suggestions {
+        max-height: 120px;
+    }
+    
+    .autocomplete-suggestion {
+        padding: 0.25rem;
+        font-size: 0.625rem;
+    }
+}
+
+/* Estilos para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    .product-section.dark-mode {
+        background-color: #1f2937;
+        color: white;
+    }
+    
+    .product-section.dark-mode input {
+        background-color: #374151;
+        color: white;
+        border-color: #6b7280;
+    }
+    
+    .product-section.dark-mode input:focus {
+        background-color: #4b5563;
+        border-color: #10b981;
+    }
+    
+    .product-section.dark-mode .autocomplete-suggestions {
+        background-color: #374151;
+        border-color: #6b7280;
+    }
+    
+    .product-section.dark-mode .autocomplete-suggestion {
+        color: white;
+        border-color: #4b5563;
+    }
+    
+    .product-section.dark-mode .autocomplete-suggestion:hover,
+    .product-section.dark-mode .autocomplete-suggestion.highlighted {
+        background-color: #4b5563;
+        border-left-color: #10b981;
+    }
+}
+
+/* Utilidades adicionales */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Estilos para indicador de loading en autocompletado */
+.autocomplete-loading {
+    position: relative;
+}
+
+.autocomplete-loading::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border: 2px solid #d1d5db;
+    border-top: 2px solid #15803d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Estilos para icono de dropdown */
+.autocomplete-dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    color: #6b7280;
+    transition: transform 0.2s ease;
+}
+
+.autocomplete-dropdown-icon.open {
+    transform: translateY(-50%) rotate(180deg);
+}

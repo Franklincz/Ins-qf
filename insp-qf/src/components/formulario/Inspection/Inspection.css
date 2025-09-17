@@ -1,0 +1,234 @@
+/* Estilos CSS complementarios para BatchInfoSection */
+
+/* Reset y estilos base */
+.batch-info-section * {
+    box-sizing: border-box;
+}
+
+/* Utilidades de espaciado */
+.mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+    .mb-4 {
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* Estilos para formularios */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Estilos para campos requeridos */
+.required-field label::after {
+    content: " *";
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .error-message {
+        font-size: 0.625rem;
+    }
+}
+
+/* Estilos para mensajes de éxito */
+.success-message {
+    color: #16a34a;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+/* Animaciones para mejor UX */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para campos con autocompletado */
+.autocomplete-container {
+    position: relative;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #000;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.autocomplete-suggestion {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.autocomplete-suggestion:hover {
+    background-color: #f3f4f6;
+}
+
+.autocomplete-suggestion:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para loading states */
+.loading-input {
+    position: relative;
+}
+
+.loading-input::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d1d5db;
+    border-top: 2px solid #15803d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Estilos para impresión */
+@media print {
+    .batch-info-section {
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .batch-info-section * {
+        color: black !important;
+        background: white !important;
+        font-weight: bold !important;
+    }
+    
+    .batch-info-section input {
+        border: 2px solid black !important;
+        background: white !important;
+    }
+    
+    .batch-info-section div {
+        border-color: black !important;
+    }
+}
+
+/* Estilos para accesibilidad */
+.batch-info-section input:focus {
+    outline: 2px solid #15803d;
+    outline-offset: 2px;
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .batch-info-section {
+        font-size: 14px;
+    }
+    
+    .batch-info-section input {
+        padding: 0.25rem !important;
+        font-size: 0.625rem !important;
+    }
+    
+    .batch-info-section label {
+        font-size: 0.625rem !important;
+    }
+}
+
+/* Estilos para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    .batch-info-section.dark-mode {
+        background-color: #1f2937;
+        color: white;
+    }
+    
+    .batch-info-section.dark-mode input {
+        background-color: #374151;
+        color: white;
+        border-color: #6b7280;
+    }
+    
+    .batch-info-section.dark-mode input:focus {
+        background-color: #4b5563;
+        border-color: #10b981;
+    }
+}
+
+/* Utilidades adicionales */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

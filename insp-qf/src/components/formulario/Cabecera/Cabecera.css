@@ -1,0 +1,136 @@
+/* Cabecera principal styles */
+.cabecera-container {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+  .cabecera-content {
+    padding: 12px 20px !important;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+  }
+  
+  .logo {
+    flex-direction: column;
+    gap: 10px !important;
+    text-align: center;
+  }
+  
+  .logo-circle {
+    width: 40px !important;
+    height: 40px !important;
+    
+    span {
+      font-size: 1rem !important;
+    }
+  }
+  
+  .title {
+    font-size: 1.4rem !important;
+    text-align: center;
+  }
+  
+  .history-button {
+    position: absolute !important;
+    top: 12px;
+    right: 20px;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
+    
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecera-content {
+    padding: 10px 15px !important;
+  }
+  
+  .logo-circle {
+    width: 35px !important;
+    height: 35px !important;
+    
+    span {
+      font-size: 0.9rem !important;
+    }
+  }
+  
+  .title {
+    font-size: 1.2rem !important;
+  }
+  
+  .history-button {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 6px !important;
+    
+    svg {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cabecera-container {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+/* Efecto de brillo en el gradiente */
+.cabecera-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Estilos para impresión */
+@media print {
+  .cabecera-container {
+    background: white !important;
+    color: black !important;
+    position: static !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #00d4aa;
+  }
+  
+  .logo-circle {
+    background-color: #00d4aa !important;
+    border-color: #00d4aa !important;
+  }
+  
+  .title {
+    color: black !important;
+    text-shadow: none !important;
+  }
+  
+  .history-button {
+    display: none !important;
+  }
+}

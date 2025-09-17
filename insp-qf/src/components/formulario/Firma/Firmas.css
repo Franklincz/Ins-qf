@@ -1,0 +1,190 @@
+/* Estilos CSS complementarios para el componente de nombres/firmas */
+
+/* Reset básico para elementos de firma */
+.signature-container * {
+    box-sizing: border-box;
+}
+
+/* Estilos para el input de nombre */
+.name-input {
+    font-family: inherit;
+}
+
+.name-input:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Estilos para el nombre mostrado como firma */
+.signature-name {
+    /* Intentar cargar fuentes cursivas adicionales */
+    font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive, serif;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* En móviles, cambiar a layout vertical */
+    .signature-container > div {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        padding: 0.75rem;
+    }
+    
+    /* Ajustar tamaño de fuente en móvil */
+    .signature-name {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En pantallas muy pequeñas */
+    .signature-container > div {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    
+    .signature-name {
+        font-size: 1rem;
+    }
+    
+    /* Ajustar inputs en móvil */
+    .name-input {
+        padding: 0.625rem;
+        font-size: 0.8125rem;
+    }
+}
+
+/* Estilos de impresión */
+@media print {
+    .signature-container {
+        page-break-inside: avoid;
+    }
+    
+    .signature-container * {
+        color: black !important;
+        background: white !important;
+    }
+    
+    .signature-container div {
+        border-color: black !important;
+    }
+    
+    /* Ocultar inputs en impresión */
+    .signature-container input {
+        display: none !important;
+    }
+    
+    /* Mostrar solo los nombres como firmas */
+    .signature-container [class*="display"] {
+        display: flex !important;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.signature-container input:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Animaciones suaves */
+.signature-container * {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Utilidades adicionales */
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Estados de validación */
+.name-input-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+}
+
+.name-input-success {
+    border-color: #10b981 !important;
+    background-color: #f0fdf4 !important;
+}
+
+.signature-error-text {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.signature-success-text {
+    color: #10b981;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Colores personalizados */
+.text-blue-600 {
+    color: #2563eb;
+}
+
+.text-green-600 {
+    color: #16a34a;
+}
+
+.text-red-600 {
+    color: #dc2626;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.text-gray-900 {
+    color: #111827;
+}
+
+.bg-blue-50 {
+    background-color: #eff6ff;
+}
+
+.bg-green-50 {
+    background-color: #f0fdf4;
+}
+
+.bg-red-50 {
+    background-color: #fef2f2;
+}
+
+.bg-gray-50 {
+    background-color: #f9fafb;
+}
+
+.border-blue-300 {
+    border-color: #93c5fd;
+}
+
+.border-green-300 {
+    border-color: #86efac;
+}
+
+.border-red-300 {
+    border-color: #fca5a5;
+}
+
+.border-gray-300 {
+    border-color: #d1d5db;
+}

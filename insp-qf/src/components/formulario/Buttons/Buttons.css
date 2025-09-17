@@ -1,0 +1,64 @@
+/* Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .buttons-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dialog-content {
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .dialog-footer {
+        flex-direction: column;
+    }
+    
+    .dialog-footer button {
+        width: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    .action-buttons-container {
+        display: none !important;
+    }
+}
+
+/* Utility classes */
+.text-success {
+    color: #10b981;
+}
+
+.ping-dot {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: #34d399;
+    opacity: 0.75;
+}
+
+.solid-dot {
+    position: relative;
+    border-radius: 9999px;
+    background-color: #10b981;
+}

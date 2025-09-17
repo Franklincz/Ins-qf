@@ -1,0 +1,505 @@
+{
+  "reportes": [
+    {
+      "id": "INS-2025-001",
+      "estado": "aprobado",
+      "metadata": {
+        "codigo": "F.GE.MC.015",
+        "tipo_documento": "Formato",
+        "version": "00",
+        "area_responsable": "Calidad y Mejora Continua",
+        "paginas": 4,
+        "completado": true
+      },
+      "elaboracion": {
+        "elaborado_por": "María González",
+        "revisado_por": "Carlos Méndez",
+        "aprobado_por": "Carlos Méndez",
+        "fecha_elaboracion": "2025-07-15",
+        "fecha_revision": "2025-07-16",
+        "fecha_aprobacion": "2025-07-16"
+      },
+      "datos_inspeccion": {
+        "area": "Área de Producción",
+        "fecha": "2025-07-14",
+        "producto": "Producto envaseado - Categoría 1",
+        "lote": "PRD-789",
+        "tamano_lote": "35 kl",
+        "tamano_muestra": "11 kl",
+        "nivel_inspeccion": "II"
+      },
+      "cuestionario": [
+        {
+          "pregunta": "¿El formulador registra correctamente la información en la orden de producción?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿El formulador está correctamente uniformado?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Las condiciones ambientales son registradas correctamente y se mantienen dentro de los parámetros establecidos?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Las áreas se encuentran identificadas correctamente?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿El formulador realiza correctamente la limpieza del área, equipos y/o instrumentos?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Se registra correctamente el análisis organoléptico del producto?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿La documentación del proceso se encuentra completa, vigente y legible?",
+          "conformidad": true,
+          "no_conformidad": false
+        }
+      ],
+      "defectos": {
+        "criticos": {
+          "aql": "0.015%",
+          "items": [
+            {
+              "descripcion": "Filtración de producto",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Degradación visible del producto (color, olor, separación en fase, decantación)",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Presencia de cuerpo extraño visible en contacto con el producto",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Envase con suciedad interna",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Envase sin contenido de producto o faltante",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mezcla de materiales con otro producto o lote",
+              "unidades": 0
+            },
+            {
+              "descripcion": "faltante de unidades",
+              "unidades": 0
+            },
+            {
+              "descripcion": "información ausente, incorrecta y/o incompleta (etiqueta de identifiación)",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "mayores": {
+          "aql": "1%",
+          "items": [
+            {
+              "descripcion": "Deterioro superficial o deterioro del material que afecten apariencia externa",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Tapas con presencia rota",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mal estado del producto que no afecta su seguridad",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Dificultad para abrir o cerrar el envase (cuando aplique)",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Ausencia de la cantidad contenida en el envase",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Ausencia del peso tara en el etiquetado",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "menores": {
+          "aql": "4%",
+          "items": [
+            {
+              "descripcion": "Envases ligeramente deformados",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Manchas o suciedad en el exterior",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Impresión deficiente que no afecta información",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "total_general": 0
+      },
+      "observaciones": [
+        "Inspección completada sin hallazgos",
+        "Todos los parámetros dentro de lo esperado"
+      ],
+      "evidencias": [
+        "produccion-1.jpg",
+        "produccion-2.jpg"
+      ]
+    },
+    {
+      "id": "INS-2025-002",
+      "estado": "rechazado",
+      "metadata": {
+        "codigo": "F.GE.MC.015",
+        "tipo_documento": "Formato",
+        "version": "00",
+        "area_responsable": "Calidad y Mejora Continua",
+        "paginas": 5,
+        "completado": true
+      },
+      "elaboracion": {
+        "elaborado_por": "Juan Pérez",
+        "revisado_por": "Ana López",
+        "aprobado_por": "Ana López",
+        "fecha_elaboracion": "2025-07-18",
+        "fecha_revision": "2025-07-19",
+        "fecha_aprobacion": "2025-07-19"
+      },
+      "datos_inspeccion": {
+        "area": "Área de Empaque",
+        "fecha": "2025-07-17",
+        "producto": "Producto C - Categoría 3",
+        "lote": "EMP-456",
+        "tamano_lote": "28 kl",
+        "tamano_muestra": "9 kl",
+        "nivel_inspeccion": "III"
+      },
+      "cuestionario": [
+        {
+          "pregunta": "¿El formulador registra correctamente la información en la orden de producción?",
+          "conformidad": false,
+          "no_conformidad": true
+        },
+        {
+          "pregunta": "¿El formulador está correctamente uniformado?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Las condiciones ambientales son registradas correctamente y se mantienen dentro de los parámetros establecidos?",
+          "conformidad": false,
+          "no_conformidad": true
+        },
+        {
+          "pregunta": "¿Las áreas se encuentran identificadas correctamente?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿El formulador realiza correctamente la limpieza del área, equipos y/o instrumentos?",
+          "conformidad": false,
+          "no_conformidad": true
+        },
+        {
+          "pregunta": "¿Se registra correctamente el análisis organoléptico del producto?",
+          "conformidad": true,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿La documentación del proceso se encuentra completa, vigente y legible?",
+          "conformidad": false,
+          "no_conformidad": true
+        }
+      ],
+      "defectos": {
+        "criticos": {
+          "aql": "0.015%",
+          "items": [
+            {
+              "descripcion": "Filtración de producto",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Degradación visible del producto (color, olor, separación en fase, decantación)",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Presencia de cuerpo extraño visible en contacto con el producto",
+              "unidades": 1
+            },
+            {
+              "descripcion": "Envase con suciedad interna",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Envase sin contenido de producto o faltante",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mezcla de materiales con otro producto o lote",
+              "unidades": 2
+            },
+            {
+              "descripcion": "faltante de unidades",
+              "unidades": 0
+            },
+            {
+              "descripcion": "información ausente, incorrecta y/o incompleta (etiqueta de identifiación)",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 3
+        },
+        "mayores": {
+          "aql": "1%",
+          "items": [
+            {
+              "descripcion": "Deterioro superficial o deterioro del material que afecten apariencia externa",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Tapas con presencia rota",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mal estado del producto que no afecta su seguridad",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Dificultad para abrir o cerrar el envase (cuando aplique)",
+              "unidades": 2
+            },
+            {
+              "descripcion": "Ausencia de la cantidad contenida en el envase",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Ausencia del peso tara en el etiquetado",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 2
+        },
+        "menores": {
+          "aql": "4%",
+          "items": [
+            {
+              "descripcion": "Envases ligeramente deformados",
+              "unidades": 3
+            },
+            {
+              "descripcion": "Manchas o suciedad en el exterior",
+              "unidades": 2
+            },
+            {
+              "descripcion": "Impresión deficiente que no afecta información",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 5
+        },
+        "total_general": 10
+      },
+      "observaciones": [
+        "Se encontraron 3 defectos críticos (1 filtración + 2 cuerpos extraños)",
+        "2 defectos mayores (1 deterioro + 1 mal estado)",
+        "5 defectos menores (3 envases deformados + 2 suciedad exterior)",
+        "Problemas con registro de información y limpieza"
+      ],
+      "evidencias": [
+        "defecto-critico-1.jpg",
+        "defecto-critico-2.jpg",
+        "defecto-mayor-1.jpg",
+        "defecto-menor-1.jpg"
+      ]
+    },
+    {
+      "id": "INS-2025-SRU1",
+      "estado": "pendiente",
+      "metadata": {
+        "codigo": "F.GE.MC.015",
+        "tipo_documento": "Formato",
+        "version": "00",
+        "area_responsable": "Calidad y Mejora Continua",
+        "paginas": 1,
+        "completado": false
+      },
+      "elaboracion": {
+        "elaborado_por": "Usuario actual",
+        "revisado_por": "",
+        "aprobado_por": "",
+        "fecha_elaboracion": "2025-07-21",
+        "fecha_revision": "",
+        "fecha_aprobacion": ""
+      },
+      "datos_inspeccion": {
+        "area": "",
+        "fecha": "",
+        "producto": "",
+        "lote": "",
+        "tamano_lote": "",
+        "tamano_muestra": "",
+        "nivel_inspeccion": ""
+      },
+      "cuestionario": [
+        {
+          "pregunta": "¿El formulador registra correctamente la información en la orden de producción?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿El formulador está correctamente uniformado?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Las condiciones ambientales son registradas correctamente y se mantienen dentro de los parámetros establecidos?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Las áreas se encuentran identificadas correctamente?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿El formulador realiza correctamente la limpieza del área, equipos y/o instrumentos?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿Se registra correctamente el análisis organoléptico del producto?",
+          "conformidad": false,
+          "no_conformidad": false
+        },
+        {
+          "pregunta": "¿La documentación del proceso se encuentra completa, vigente y legible?",
+          "conformidad": false,
+          "no_conformidad": false
+        }
+      ],
+      "defectos": {
+        "criticos": {
+          "aql": "0.015%",
+          "items": [
+            {
+              "descripcion": "Filtración de producto",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Degradación visible del producto (color, olor, separación en fase, decantación)",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Presencia de cuerpo extraño visible en contacto con el producto",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Envase con suciedad interna",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Envase sin contenido de producto o faltante",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mezcla de materiales con otro producto o lote",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Faltante de unidades",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Información ausente, incorrecta y/o incompleta (etiqueta de identificación)",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "mayores": {
+          "aql": "1%",
+          "items": [
+            {
+              "descripcion": "Deterioro superficial o deterioro del material que afecten apariencia externa",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Tapas con presencia rota",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Mal estado del producto que no afecta su seguridad",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Dificultad para abrir o cerrar el envase (cuando aplique)",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Ausencia de la cantidad contenida en el envase",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Ausencia del peso tara en el etiquetado",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "menores": {
+          "aql": "4%",
+          "items": [
+            {
+              "descripcion": "Envases ligeramente deformados",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Manchas o suciedad en el exterior",
+              "unidades": 0
+            },
+            {
+              "descripcion": "Impresión de rotulado deficiente que no afecta la información",
+              "unidades": 0
+            }
+          ],
+          "total_defectos": 0
+        },
+        "total_general": 0
+      },
+      "observaciones": [],
+      "evidencias": []
+    }
+  ],
+  "estados": {
+    "aprobado": {
+      "descripcion": "Formulario completo con cero defectos detectados",
+      "condicion": "total_general == 0 && metadata.completado == true"
+    },
+    "rechazado": {
+      "descripcion": "Formulario completo con uno o más defectos detectados",
+      "condicion": "total_general > 0 && metadata.completado == true"
+    },
+    "pendiente": {
+      "descripcion": "Formulario incompleto o con datos faltantes",
+      "condicion": "metadata.completado == false"
+    }
+  }
+}

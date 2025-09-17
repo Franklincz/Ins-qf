@@ -1,0 +1,19 @@
+{
+  "name": "backend-email",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
+  },
+  "dependencies": {
+    "firebase": "^12.0.0",
+    "firebase-admin": "^13.5.0",
+    "googleapis": "^155.0.1",
+    "next": "^15.4.5",
+    "nodemailer": "^6.9.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "engines": { "node": ">=18.17" }
+}

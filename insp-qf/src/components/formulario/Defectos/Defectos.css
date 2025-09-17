@@ -1,0 +1,324 @@
+/* Estilos CSS complementarios para DefectsSection */
+
+/* Reset y estilos base */
+.defects-section * {
+    box-sizing: border-box;
+}
+
+/* Utilidades de espaciado específicas para defectos */
+.mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+    .mb-4 {
+        margin-bottom: 0.75rem !important;
+    }
+}
+
+/* Estilos para filas específicas con data attributes */
+.defects-section [data-section="major"][data-question-index="4"] {
+    border-bottom: 2px solid #f59e0b;
+}
+
+.defects-section [data-section="major"][data-question-index="5"] {
+    border-top: 2px solid #f59e0b;
+}
+
+/* Estilos para campos requeridos en defectos */
+.required-defect::after {
+    content: " *";
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de error específicos de defectos */
+.defect-error-message {
+    color: #dc2626;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .defect-error-message {
+        font-size: 0.625rem;
+    }
+}
+
+/* Estilos para mensajes de éxito específicos de defectos */
+.defect-success-message {
+    color: #16a34a;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+/* Animaciones para mejor UX en defectos */
+.defect-fade-in {
+    animation: defectFadeIn 0.3s ease-in;
+}
+
+@keyframes defectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para destacar secciones de defectos */
+.critical-defects {
+    border-left: 4px solid #dc2626;
+}
+
+.major-defects {
+    border-left: 4px solid #f59e0b;
+}
+
+.minor-defects {
+    border-left: 4px solid #10b981;
+}
+
+/* Estilos para inputs con validación numérica */
+.numeric-input:invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.numeric-input:valid {
+    border-color: #16a34a;
+    background-color: #f0fdf4;
+}
+
+/* Estilos para autocompletado en defectos */
+.defect-autocomplete-container {
+    position: relative;
+}
+
+.defect-autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #000;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.defect-autocomplete-suggestion {
+    padding: 0.375rem;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.defect-autocomplete-suggestion:hover {
+    background-color: #f3f4f6;
+}
+
+.defect-autocomplete-suggestion:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para loading states en defectos */
+.defect-loading-input {
+    position: relative;
+}
+
+.defect-loading-input::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d1d5db;
+    border-top: 1px solid #15803d;
+    border-radius: 50%;
+    animation: defectSpin 1s linear infinite;
+}
+
+@keyframes defectSpin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Estilos para resaltado de filas activas */
+.defect-row-active {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+}
+
+/* Estilos para impresión específicos de defectos */
+@media print {
+    .defects-section {
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .defects-section * {
+        color: black !important;
+        background: white !important;
+        font-weight: bold !important;
+    }
+    
+    .defects-section input {
+        border: 2px solid black !important;
+        background: white !important;
+    }
+    
+    .defects-section div {
+        border-color: black !important;
+    }
+    
+    .critical-defects,
+    .major-defects,
+    .minor-defects {
+        border-left: 4px solid black !important;
+    }
+}
+
+/* Estilos para accesibilidad mejorada */
+.defects-section input:focus {
+    outline: 2px solid #15803d;
+    outline-offset: 2px;
+}
+
+.defects-section .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mejoras para pantallas muy pequeñas específicas de defectos */
+@media (max-width: 360px) {
+    .defects-section {
+        font-size: 12px;
+    }
+    
+    .defects-section input {
+        padding: 0.125rem !important;
+        font-size: 0.75rem !important;
+        height: 1.5rem !important;
+    }
+    
+    .defects-section .defect-description {
+        font-size: 0.625rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Estilos para modo oscuro específicos de defectos */
+@media (prefers-color-scheme: dark) {
+    .defects-section.dark-mode {
+        background-color: #1f2937;
+        color: white;
+    }
+    
+    .defects-section.dark-mode input {
+        background-color: #374151;
+        color: white;
+        border-color: #6b7280;
+    }
+    
+    .defects-section.dark-mode input:focus {
+        background-color: #4b5563;
+        border-color: #10b981;
+    }
+    
+    .defects-section.dark-mode .defect-autocomplete-suggestions {
+        background-color: #374151;
+        border-color: #6b7280;
+    }
+}
+
+/* Utilidades adicionales específicas para defectos */
+.defect-text-center {
+    text-align: center;
+}
+
+.defect-font-bold {
+    font-weight: 700;
+}
+
+.defect-font-medium {
+    font-weight: 500;
+}
+
+.defect-hidden {
+    display: none;
+}
+
+/* Estilos para indicadores de estado */
+.defect-status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.defect-status-critical {
+    background-color: #dc2626;
+}
+
+.defect-status-major {
+    background-color: #f59e0b;
+}
+
+.defect-status-minor {
+    background-color: #10b981;
+}
+
+/* Hover effects para mejor UX */
+.defect-input-container:hover input {
+    border-color: #6b7280;
+}
+
+/* Estilos para tooltips informativos */
+.defect-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.defect-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f2937;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+.defect-tooltip:hover::after {
+    opacity: 1;
+}
